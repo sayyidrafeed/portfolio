@@ -40,7 +40,7 @@
         <ul class="space-y-3 text-gray-400">
           <li class="flex items-start gap-3">
             <span
-              class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
+              class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
             <span
               >Build modern web applications with TypeScript, Svelte, and React</span
@@ -48,19 +48,19 @@
           </li>
           <li class="flex items-start gap-3">
             <span
-              class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
+              class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
             <span>Design and implement scalable backend services</span>
           </li>
           <li class="flex items-start gap-3">
             <span
-              class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
+              class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
             <span>Create pixel-perfect UIs with keen attention to detail</span>
           </li>
           <li class="flex items-start gap-3">
             <span
-              class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
+              class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
             <span>Optimize for performance and accessibility</span>
           </li>

@@ -1,45 +1,46 @@
 <script lang="ts">
-  import { heroData } from '../../../features/hero/data';
-  import { navigateTo } from '../../stores/activeView';
+  import { heroData } from "../../../features/hero/data";
+  import { navigateTo } from "../../stores/activeView";
 
   const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="w-full border-t border-white/10 py-12 px-6">
   <div class="mx-auto max-w-6xl">
-    <div class="flex flex-col items-center gap-8 md:flex-row md:justify-between">
+    <div
+      class="flex flex-col items-center gap-8 md:flex-row md:justify-between"
+    >
       <!-- Copyright & Built With -->
       <div class="text-center md:text-left">
         <p class="text-sm text-gray-500">
-          © {currentYear} {heroData.name}. All rights reserved.
+          © {currentYear}
+          {heroData.name}. All rights reserved.
         </p>
-        <p class="mt-1 text-xs text-gray-600">
-          Built with <span class="text-gravity-400">Svelte</span> & <span class="text-gravity-400">TailwindCSS</span>
-        </p>
+        <p class="mt-1 text-xs text-gray-600">Built with a lots of prompts</p>
       </div>
 
       <!-- Navigation Links -->
       <div class="flex items-center gap-6">
         <button
-          onclick={() => navigateTo('HERO')}
+          onclick={() => navigateTo("HERO")}
           class="text-sm text-gray-500 transition-colors hover:text-gray-300"
         >
           Home
         </button>
         <button
-          onclick={() => navigateTo('SHOWCASE')}
+          onclick={() => navigateTo("SHOWCASE")}
           class="text-sm text-gray-500 transition-colors hover:text-gray-300"
         >
           Work
         </button>
         <button
-          onclick={() => navigateTo('ABOUT')}
+          onclick={() => navigateTo("ABOUT")}
           class="text-sm text-gray-500 transition-colors hover:text-gray-300"
         >
           About
         </button>
         <button
-          onclick={() => navigateTo('CONTACT')}
+          onclick={() => navigateTo("CONTACT")}
           class="text-sm text-gray-500 transition-colors hover:text-gray-300"
         >
           Contact

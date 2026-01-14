@@ -31,7 +31,7 @@ export interface Profile {
 /**
  * Tech stack enumeration
  */
-export type TechStack =
+export type ProjectTag =
     | 'HTML'
     | 'CSS'
     | 'JavaScript'
@@ -47,12 +47,20 @@ export type TechStack =
     | 'Hono'
     | 'TailwindCSS'
     | 'PostgreSQL'
+    | 'MongoDB'
     | 'Redis'
     | 'Docker'
     | 'Vite'
     | 'Bun'
     | 'PHP'
     | 'MySQL'
+    | 'Figma'
+    | 'Design Thinking'
+    | 'Design System'
+    | 'User Research'
+    | 'Wireframing'
+    | 'Prototyping'
+    | 'Custom Icons'
     ;
 
 /**
@@ -75,7 +83,7 @@ export interface Project {
     readonly category: ProjectCategory;
     readonly thumbnail: string; // webp path
     readonly gallery: readonly string[]; // Array of webp paths
-    readonly techStack: readonly TechStack[];
+    readonly tags: readonly ProjectTag[];
     readonly liveUrl?: string;
     readonly repoUrl?: string;
     readonly featured: boolean;

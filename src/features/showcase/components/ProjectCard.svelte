@@ -64,9 +64,9 @@
 
     <!-- Tech Stack -->
     <div class="mb-4 flex flex-wrap gap-2">
-      {#each project.techStack.slice(0, 4) as tech}
+      {#each project.tags.slice(0, 4) as tag}
         <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-500">
-          {tech}
+          {tag}
         </span>
       {/each}
     </div>

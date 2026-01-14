@@ -25,7 +25,7 @@
       </h2>
 
       <p class="mx-auto max-w-2xl text-lg text-gray-400">
-        A collection of projects I've built, from web applications to APIs and
+        A collection of projects I've built, from web applications, UI and
         everything in between.
       </p>
     </div>
