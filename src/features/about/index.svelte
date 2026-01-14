@@ -27,42 +27,40 @@
     <div class="glass-card rounded-2xl p-8 md:p-12">
       <div class="prose prose-invert max-w-none">
         <p class="text-lg text-gray-300 leading-relaxed mb-6">
-          I'm a passionate software engineer with a deep love for building
-          elegant, high-performance web applications. My journey in tech has
-          taken me through various domains, from front-end development to
-          backend systems, always with a focus on clean architecture and
-          exceptional user experiences.
+          I'm a passionate software developer with a high curiosity for learning
+          and a deep love for building elegant, high-performance web
+          applications. My journey in tech has taken me through various domains,
+          from front-end development to backend systems, always with a focus on
+          clean architecture and exceptional user experiences.
         </p>
 
         <h3 class="font-display text-xl font-semibold text-white mb-4">
-          What I Do
+          What I Focus on
         </h3>
         <ul class="space-y-3 text-gray-400">
           <li class="flex items-start gap-3">
             <span
               class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
-            <span
-              >Build modern web applications with TypeScript, Svelte, and React</span
-            >
+            <span>Interaction Design</span>
           </li>
           <li class="flex items-start gap-3">
             <span
               class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
-            <span>Design and implement scalable backend services</span>
+            <span>System Architecture</span>
           </li>
           <li class="flex items-start gap-3">
             <span
               class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
-            <span>Create pixel-perfect UIs with keen attention to detail</span>
+            <span>App Performance</span>
           </li>
           <li class="flex items-start gap-3">
             <span
               class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"
             ></span>
-            <span>Optimize for performance and accessibility</span>
+            <span>Developer Experience</span>
           </li>
         </ul>
       </div>

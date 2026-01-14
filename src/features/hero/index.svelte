@@ -3,6 +3,7 @@
   import { navigateTo } from "../../shared/stores/activeView";
   import GravityButton from "./components/GravityButton.svelte";
   import Typewriter from "../../shared/ui/Typewriter.svelte";
+  import SocialIcon from "../../shared/ui/SocialIcon.svelte";
 </script>
 
 <section
@@ -65,7 +66,7 @@
           class="text-gray-500 transition-colors duration-200 hover:text-gravity-400"
           aria-label={link.label}
         >
-          <span class="text-sm font-medium">{link.label}</span>
+          <SocialIcon icon={link.icon} class="h-6 w-6" />
         </a>
       {/each}
     </div>
