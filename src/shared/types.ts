@@ -56,12 +56,23 @@ export type TechStack =
     ;
 
 /**
+ * Project category for visual labeling
+ */
+export type ProjectCategory =
+    | 'UI/UX Design'
+    | 'Frontend'
+    | 'Backend'
+    | 'Fullstack'
+    | 'Other';
+
+/**
  * Project/Work showcase item
  */
 export interface Project {
     readonly id: string; // Unique slug
     readonly title: string;
     readonly description: string;
+    readonly category: ProjectCategory;
     readonly thumbnail: string; // webp path
     readonly gallery: readonly string[]; // Array of webp paths
     readonly techStack: readonly TechStack[];

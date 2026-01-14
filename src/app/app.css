@@ -1,6 +1,5 @@
 /* Font imports - Variable fonts for optimal performance */
 @import '@fontsource-variable/plus-jakarta-sans';
-@import '@fontsource-variable/space-grotesk';
 
 @tailwind base;
 @tailwind components;

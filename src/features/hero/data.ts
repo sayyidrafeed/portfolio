@@ -3,7 +3,7 @@ import type { Profile } from '../../shared/types';
 export const heroData: Profile = {
     name: 'Rafee',
     tagline: 'Shaping the future through code, while learning every step.',
-    bio: `Hi hi, I'm Rafee. A CS Student. `,
+    bio: `Hi hi, I'm Rafee. A CS Student. I'm a tech enthusiast, always learning and exploring new technologies. I'm currently learning web development and backend development.`,
     socialLinks: [
         {
             label: 'GitHub',
