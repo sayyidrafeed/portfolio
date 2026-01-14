@@ -4,7 +4,7 @@
  */
 
 /**
- * Viewport states for the Anti-Gravity navigation
+ * Viewport states for the navigation
  */
 export type ViewportState = 'HERO' | 'SHOWCASE' | 'ABOUT' | 'CONTACT';
 
@@ -32,6 +32,9 @@ export interface Profile {
  * Tech stack enumeration
  */
 export type TechStack =
+    | 'HTML'
+    | 'CSS'
+    | 'JavaScript'
     | 'TypeScript'
     | 'Svelte'
     | 'React'
@@ -40,14 +43,17 @@ export type TechStack =
     | 'Go'
     | 'Rust'
     | 'Python'
+    | 'Express'
+    | 'Hono'
     | 'TailwindCSS'
     | 'PostgreSQL'
     | 'Redis'
     | 'Docker'
-    | 'AWS'
-    | 'GCP'
     | 'Vite'
-    | 'Bun';
+    | 'Bun'
+    | 'PHP'
+    | 'MySQL'
+    ;
 
 /**
  * Project/Work showcase item

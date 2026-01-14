@@ -2,22 +2,22 @@ import type { Profile } from '../../shared/types';
 
 export const heroData: Profile = {
     name: 'Rafee',
-    tagline: 'Building the future, one line of code at a time',
-    bio: `I'm a passionate software engineer who specializes in crafting **high-performance** web applications. I believe in clean code, thoughtful architecture, and pixel-perfect experiences.`,
+    tagline: 'Shaping the future through code, while learning every step.',
+    bio: `Hi hi, I'm Rafee. A CS Student. `,
     socialLinks: [
         {
             label: 'GitHub',
-            url: 'https://github.com/rafee',
+            url: 'https://github.com/sayyidrafeed',
             icon: 'github',
         },
         {
             label: 'LinkedIn',
-            url: 'https://linkedin.com/in/rafee',
+            url: 'https://linkedin.com/in/m-sayyid-rafee-djamil/',
             icon: 'linkedin',
         },
         {
             label: 'Twitter',
-            url: 'https://twitter.com/rafee',
+            url: 'https://x.com/RFD77538690',
             icon: 'twitter',
         },
     ],
