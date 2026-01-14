@@ -23,22 +23,33 @@
   class="group relative overflow-hidden rounded-2xl glass-card transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gravity-500/20"
 >
   <!-- Thumbnail -->
-  <div class="aspect-video overflow-hidden bg-gray-800">
-    <div class="flex h-full items-center justify-center text-gray-600">
-      <svg
-        class="h-16 w-16"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
-          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-        />
-      </svg>
-    </div>
+  <div
+    class="aspect-video overflow-hidden bg-gray-800 relative group-hover:scale-105 transition-transform duration-500"
+  >
+    {#if project.thumbnail}
+      <img
+        src={project.thumbnail}
+        alt={project.title}
+        class="h-full w-full object-cover object-center"
+        loading="lazy"
+      />
+    {:else}
+      <div class="flex h-full items-center justify-center text-gray-600">
+        <svg
+          class="h-16 w-16"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
+      </div>
+    {/if}
   </div>
 
   <!-- Content -->
