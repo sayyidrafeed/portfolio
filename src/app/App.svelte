@@ -4,6 +4,7 @@
   import Hero from '../features/hero/index.svelte';
   import Showcase from '../features/showcase/index.svelte';
   import About from '../features/about/index.svelte';
+  import Contact from '../features/contact/index.svelte';
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -32,6 +33,10 @@
     {:else if $activeView === 'ABOUT'}
       <div in:fly={{ y: 50, duration: 600 }} out:blur={{ duration: 300 }}>
         <About />
+      </div>
+    {:else if $activeView === 'CONTACT'}
+      <div in:fly={{ y: 100, duration: 600 }} out:blur={{ duration: 300 }}>
+        <Contact />
       </div>
     {/if}
   </div>

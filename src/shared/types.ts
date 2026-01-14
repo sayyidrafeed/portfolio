@@ -6,7 +6,7 @@
 /**
  * Viewport states for the Anti-Gravity navigation
  */
-export type ViewportState = 'HERO' | 'SHOWCASE' | 'ABOUT';
+export type ViewportState = 'HERO' | 'SHOWCASE' | 'ABOUT' | 'CONTACT';
 
 /**
  * Social link definition

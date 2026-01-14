@@ -1,5 +1,6 @@
 <script lang="ts">
   import { navigateTo } from '../../shared/stores/activeView';
+  import Footer from '../../shared/ui/layout/Footer.svelte';
 </script>
 
 <section class="min-h-screen w-full px-6 py-20">
@@ -13,7 +14,7 @@
         ← Back to Home
       </button>
       
-      <h2 class="mb-4 text-4xl font-bold text-white md:text-5xl">
+      <h2 class="mb-4 font-display text-4xl font-bold text-white md:text-5xl">
         About <span class="text-gradient">Me</span>
       </h2>
     </div>
@@ -27,7 +28,7 @@
           always with a focus on clean architecture and exceptional user experiences.
         </p>
         
-        <h3 class="text-xl font-semibold text-white mb-4">What I Do</h3>
+        <h3 class="font-display text-xl font-semibold text-white mb-4">What I Do</h3>
         <ul class="space-y-3 text-gray-400">
           <li class="flex items-start gap-3">
             <span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gravity-400"></span>
@@ -60,3 +61,5 @@
     </div>
   </div>
 </section>
+
+<Footer />

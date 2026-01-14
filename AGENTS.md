@@ -99,7 +99,24 @@ Atomic Design: Reusable UI elements (Buttons, Cards) go to src/shared/ui and mus
 
 Logic Separation: If a component exceeds 150 lines, extract logic into a generic .ts file (hook pattern).
 
-## 6. Git Workflow
+## 6. Animation Strategy
+    
+   - **Mount/Unmount**: Use **Svelte Transitions** (`transition:`, `in:`, `out:`).
+     - Example: `in:fly={{ y: 20 }}` for entering views.
+   - **Continuous/Ambient**: Use **CSS Keyframes** defined in `tailwind.config.js`.
+     - *Why?* Runs off the main thread, cheaper for infinite loops.
+     - Example: `animate-float`, `animate-glow`.
+   - **Micro-interactions**: Use CSS transitions via Tailwind classes (`transition-all duration-300 hover:scale-105`).
+
+## 7. Styling Hierarchy
+
+   - **Level 1 (Primary)**: Tailwind Utility Classes (e.g., `flex`, `p-4`, `text-white`).
+   - **Level 2 (Complex/Reusable)**: Abstract into Custom CSS Classes in `app.css` (Components Layer).
+     - Use for complex visual effects like Glassmorphism that require multiple properties.
+     - Example: `.glass`, `.glass-card`.
+   - **Level 3 (Scoped)**: `<style>` blocks in Svelte components (Avoid if possible, prefer Level 1 or 2).
+
+## 8. Git Workflow
 
 Commit Convention: Conventional Commits (e.g., feat: add project showcase, fix: hero responsiveness).
 

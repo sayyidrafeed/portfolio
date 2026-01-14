@@ -1,9 +1,13 @@
+/* Font imports - Variable fonts for optimal performance */
+@import '@fontsource-variable/plus-jakarta-sans';
+@import '@fontsource-variable/space-grotesk';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
@@ -30,26 +34,22 @@ body {
 }
 
 /* Glass effect utilities */
-@layer utilities {
+@layer components {
   .glass {
+    @apply backdrop-blur-[12px] border border-white/10;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-card {
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    );
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    @apply backdrop-blur-[16px] border border-white/10;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.05) 100%);
   }
+}
 
+@layer utilities {
   .text-gradient {
     background: linear-gradient(135deg, #7cc8fb 0%, #0c8ee6 50%, #015a9f 100%);
     -webkit-background-clip: text;

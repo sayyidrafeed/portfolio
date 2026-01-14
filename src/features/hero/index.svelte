@@ -16,7 +16,7 @@
     </div>
 
     <!-- Name & Tagline -->
-    <h1 class="mb-6 text-5xl font-bold tracking-tight text-white md:text-7xl">
+    <h1 class="mb-6 font-display text-5xl font-bold tracking-tight text-white md:text-7xl">
       Hi, I'm <span class="text-gradient">{heroData.name}</span>
     </h1>
     
@@ -36,6 +36,9 @@
       </GravityButton>
       <GravityButton onclick={() => navigateTo('ABOUT')} variant="secondary">
         About Me
+      </GravityButton>
+      <GravityButton onclick={() => navigateTo('CONTACT')} variant="secondary">
+        Contact Me
       </GravityButton>
     </div>
 

@@ -2,6 +2,7 @@
   import { projects } from './data';
   import { navigateTo } from '../../shared/stores/activeView';
   import ProjectCard from './components/ProjectCard.svelte';
+  import Footer from '../../shared/ui/layout/Footer.svelte';
 </script>
 
 <section class="min-h-screen w-full px-6 py-20">
@@ -15,7 +16,7 @@
         ← Back to Home
       </button>
       
-      <h2 class="mb-4 text-4xl font-bold text-white md:text-5xl">
+      <h2 class="mb-4 font-display text-4xl font-bold text-white md:text-5xl">
         My <span class="text-gradient">Work</span>
       </h2>
       
@@ -42,3 +43,5 @@
     </div>
   </div>
 </section>
+
+<Footer />

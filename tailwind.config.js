@@ -7,7 +7,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
+                sans: ['"Plus Jakarta Sans Variable"', 'system-ui', 'sans-serif'],
+                display: ['"Space Grotesk Variable"', 'system-ui', 'sans-serif'],
             },
             colors: {
                 // Anti-Gravity custom palette

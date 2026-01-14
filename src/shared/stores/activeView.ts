@@ -26,7 +26,7 @@ export function initViewportFromHash(): void {
     if (typeof window === 'undefined') return;
 
     const hash = window.location.hash.slice(1).toUpperCase();
-    const validViews: ViewportState[] = ['HERO', 'SHOWCASE', 'ABOUT'];
+    const validViews: ViewportState[] = ['HERO', 'SHOWCASE', 'ABOUT', 'CONTACT'];
 
     if (validViews.includes(hash as ViewportState)) {
         activeView.set(hash as ViewportState);
