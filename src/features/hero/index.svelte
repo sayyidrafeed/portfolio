@@ -1,7 +1,7 @@
 <script lang="ts">
   import { heroData } from "./data";
   import { navigateTo } from "../../shared/stores/activeView";
-  import GravityButton from "./components/GravityButton.svelte";
+  import GravityButton from "../../shared/ui/GravityButton.svelte";
   import Typewriter from "../../shared/ui/Typewriter.svelte";
   import SocialIcon from "../../shared/ui/SocialIcon.svelte";
 </script>

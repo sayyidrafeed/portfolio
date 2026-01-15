@@ -16,24 +16,48 @@ src/
 │
 ├── features/             # THE MODULAR MONOLITH (Feature Domains)
 │   ├── hero/             # Hero Section Feature
-│   │   ├── components/   # UI components specific to Hero (e.g., GravityButton.svelte)
-│   │   ├── data.ts       # Static data specific to Hero
+│   │   ├── data.ts       # Re-exports from shared/data/profile.ts
 │   │   └── index.svelte  # Main container for this feature
 │   │
 │   ├── showcase/         # Project/Work Showcase Feature
-│   │   ├── components/   # (e.g., ProjectCard.svelte, Filter.svelte)
+│   │   ├── components/   # (e.g., ProjectCard.svelte)
 │   │   ├── data.ts       # Projects data list (Strictly Typed)
 │   │   └── index.svelte
 │   │
-│   └── about/            # About Me Feature
+│   ├── about/            # About Me Feature
+│   │   ├── data.ts       # About content (intro, focus items)
+│   │   └── index.svelte
+│   │
+│   └── contact/          # Contact Feature
+│       ├── components/   # (e.g., CopyEmailButton.svelte)
+│       └── index.svelte
 │
 ├── shared/               # SHARED RESOURCES (Reusable across features)
+│   ├── data/             # Shared data (Single Source of Truth)
+│   │   └── profile.ts    # Profile name, bio, socialLinks
 │   ├── ui/               # Atomic/Dumb Components (Buttons, Inputs, Typo)
+│   │   ├── GravityButton.svelte   # Primary/Secondary action button
+│   │   ├── BackButton.svelte      # Navigation back button
+│   │   ├── SectionHeader.svelte   # Typewriter heading with back button
+│   │   ├── SocialIcon.svelte      # Social media icons
+│   │   ├── Typewriter.svelte      # Typewriter text effect
+│   │   └── layout/
+│   │       └── Footer.svelte      # Global footer component
 │   ├── assets/           # Global static assets (Logos, OG Images)
 │   ├── lib/              # Utilities, hooks, constants
+│   │   └── navigation.ts # Navigation links config (NavLink[])
 │   ├── stores/           # Global state (Theme, Active Viewport)
+│   │   └── activeView.ts # Viewport state management
 │   └── types.ts          # SHARED TYPESCRIPT INTERFACES (The Contract)
 ```
+
+### Important Architecture Rules
+
+1. **Shared NEVER imports from Features**: The `shared/` directory must remain independent. Features can import from shared, but never the reverse.
+
+2. **Profile Data Flow**: `shared/data/profile.ts` is the single source of truth. Features like Hero re-export it via their own `data.ts` for convenience.
+
+3. **Reusable UI in shared/ui**: Components like `GravityButton`, `BackButton`, `SectionHeader` belong in `shared/ui/` since they're used across multiple features.
 
 ## 2. TypeScript & Data Standards
 

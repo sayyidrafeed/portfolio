@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { heroData } from "../hero/data";
+  import { socialLinks } from "../../shared/data/profile";
   import { navigateTo } from "../../shared/stores/activeView";
   import CopyEmailButton from "./components/CopyEmailButton.svelte";
   import Footer from "../../shared/ui/layout/Footer.svelte";
   import SocialIcon from "../../shared/ui/SocialIcon.svelte";
+  import BackButton from "../../shared/ui/BackButton.svelte";
   import Typewriter from "../../shared/ui/Typewriter.svelte";
 </script>
 
@@ -12,12 +13,9 @@
 >
   <div class="mx-auto max-w-4xl text-center">
     <!-- Back Button -->
-    <button
-      onclick={() => navigateTo("HERO")}
-      class="mb-12 inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-300 transition-colors"
-    >
-      ← Back to Home
-    </button>
+    <div class="mb-12">
+      <BackButton to="HERO" />
+    </div>
 
     <!-- Main Heading -->
     <h1
@@ -45,7 +43,7 @@
         Find me on
       </h3>
       <div class="flex flex-wrap items-center justify-center gap-4">
-        {#each heroData.socialLinks as link}
+        {#each socialLinks as link}
           <a
             href={link.url}
             target="_blank"

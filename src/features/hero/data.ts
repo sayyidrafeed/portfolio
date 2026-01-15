@@ -1,26 +1,10 @@
 import type { Profile } from '../../shared/types';
+import { profileData, socialLinks } from '../../shared/data/profile';
 
+/**
+ * Hero section data - Re-exports shared profile data for Hero feature consumption
+ */
 export const heroData: Profile = {
-    name: 'Rafee',
-    tagline: 'Shaping the future through code, while learning every step.',
-    bio: `Hi hi, I'm Sayyid Rafee. A CS Student. I'm a tech enthusiast, always learning and exploring new technologies.
-        I'm currently learning web development and backend development.`,
-    socialLinks: [
-        {
-            label: 'GitHub',
-            url: 'https://github.com/sayyidrafeed',
-            icon: 'github',
-        },
-        {
-            label: 'LinkedIn',
-            url: 'https://linkedin.com/in/m-sayyid-rafee-djamil/',
-            icon: 'linkedin',
-        },
-        {
-            label: 'Twitter',
-            url: 'https://x.com/RFD77538690',
-            icon: 'twitter',
-        },
-    ],
-    availabilityStatus: 'available',
+    ...profileData,
+    socialLinks,
 } as const;
