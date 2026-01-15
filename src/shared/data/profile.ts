@@ -7,8 +7,8 @@ import type { SocialLink } from '../types';
 export const profileData = {
     name: 'Rafee',
     tagline: 'Shaping the future through code, while learning every step.',
-    bio: `Hi hi, I'm Sayyid Rafee. A CS Student. I'm a tech enthusiast, always learning and exploring new technologies.
-        I'm currently learning web development and backend development.`,
+    bio: `Hi, I'm Sayyid Rafee. A 2nd-year CS Student & Tech Enthusiast.
+        Focusing on Backend Engineering while exploring the full spectrum of modern web development.`,
     availabilityStatus: 'available' as const,
 } as const;
 
