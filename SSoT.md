@@ -36,31 +36,37 @@ Language: TypeScript
 
 ## Data Schema (Conceptual)
 
-Actual interfaces are defined in code (src/shared/types.ts), but this implies the data requirements:
+Actual interfaces are defined in code (`src/shared/types.ts`), but this implies the data requirements:
 
-1. Profile
+### 1. Profile (Single Source of Truth: `src/shared/data/profile.ts`)
 
-Name, Tagline, Bio (Markdown support).
+- **Name, Tagline, Bio** (Markdown support).
+- **Social Links** (Label, URL, Icon identifier).
+- **Availability Status**.
 
-Social Links (Label, URL, Icon identifier).
+> **Data Flow**: `shared/data/profile.ts` → re-exported by `features/hero/data.ts` → consumed by Hero, Footer, Contact.
 
-Availability Status.
+### 2. Projects (Source: `src/features/showcase/data.ts`)
 
-2. Projects (Showcase)
+- **ID**: Unique slug.
+- **Media**: Thumbnail (webp), Gallery (array of webp).
+- **Details**: Title, Description, Tags (Enum of technologies/methodologies).
+- **Category**: UI/UX Design, Frontend, Backend, Fullstack, Other.
+- **Links**: Live Demo, Repository.
+- **Flags**: `featured`, `archived`.
 
-ID: Unique slug.
+### 3. About (Source: `src/features/about/data.ts`)
 
-Media: Thumbnail (webp), Gallery (array of webp).
+- **Intro**: Bio paragraph.
+- **Focus Items**: List of focus areas (title).
 
-Details: Title, Description, Tech Stack (Enum).
+### 4. Navigation (Source: `src/shared/lib/navigation.ts`)
 
-Links: Live Demo, Repository.
+- **NavLinks**: Array of { label, view } for consistent navigation across Footer.
 
-Tags: Feature flags (e.g., featured, archived).
+### 5. Experience (Future)
 
-3. Experience
-
-Company, Role, Date Range, Description points.
+- Company, Role, Date Range, Description points.
 
 ## Navigation & Interaction Model
 
